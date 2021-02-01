@@ -14,19 +14,28 @@ function App() {
       console.log('Hello');
       if(!name){
         //display alert
+
+        showAlert(true, 'danger', 'please enter value');
       } else if (name && isEditing) {
         //deal with edit 
+
       } else {
         //show alert
+        showAlert(true, 'success', 'Item added to the List');
         const newItem = {id: new Date().getTime().toString(), title: name};
         setList([...list, newItem]); 
         setName('');
       }
   };
+
+  const showAlert = (show = false, type = "", msg = "") => {
+      setAlert({ show, type, msg });
+  };
+
   return (
     <section className="section-center">
        <form className="grocery-form" onSubmit={handleSubmit}>
-         {alert.show && <Alert />}
+         {alert.show && <Alert {...alert} removeAlert={showAlert}/>}
          <h3>Grocery Item</h3>
          <div className="form-control">
            <input type="text" className="grocery" placeholder="e.g. eggs" value={name} onChange={(e) => setName(e.target.value)}/>
