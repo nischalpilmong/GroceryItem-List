@@ -1,13 +1,57 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+}
+.section-center{
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 35rem;
+  margin-top: 8rem;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border-radius: 0.25rem;
+  padding: 2rem;
+  transition: all 0.3s linear;
+}
+.grocery-form h3{
+   text-align: center;
+   color: hsl(205, 86%, 17%);
+   margin-bottom: 1.5rem;
+}
+.form-control{
+  display: flex;
+  justify-content: center;
+}
+.grocery{
+   padding: 0.25rem;
+   padding-left: 1rem;
+   background: hsl(210, 36%, 96%);
+   border-color: transparent;
+   color: hsl(210, 22%, 49%);
+   flex: 1 0 auto;
+}
+.grocery::placeholder{
+  color: hsl(210, 22%, 49%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.submit-btn{
+  background: hsl(205, 86%, 81%);
+  flex: 0 0 5rem;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  cursor: pointer;
+  padding: 0.25rem;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.submit-btn:hover{
+  background: hsl(205, 78%, 60%);
+  color: white;
+}
+
+/*Grocery List*/
+.grocery-container{
+  margin-top: 2rem;
 }
