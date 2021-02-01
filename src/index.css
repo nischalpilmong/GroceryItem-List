@@ -55,3 +55,58 @@
 .grocery-container{
   margin-top: 2rem;
 }
+.grocery-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-transform: capitalize;
+  border-radius: 0.25rem;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem 1rem;
+}
+.title{
+  margin-bottom: 0;
+  letter-spacing: 2px;
+  transition: all 0.3s linear;
+  text-transform: capitalize;
+  color: hsl(205, 86%, 17%);
+}
+
+.edit-btn, .delete-btn{
+   background: transparent;
+   border-color: transparent;
+   cursor: pointer;
+   font-size: 0.7rem;
+   margin: 0 0.35rem;
+}
+.edit-btn{
+  color: green;
+}
+.edit-btn:hover{
+  color: lightgreen;
+}
+.delete-btn{
+  color: red;
+}
+.delete-btn:hover{
+  color: orange;
+}
+
+.clear-btn{
+  text-transform: capitalize;
+  width: 10rem;
+  height: 1.5rem;
+  display: grid;
+  align-items: center;
+  color: crimson;
+  margin: 0 auto;
+  border-color: transparent;
+  background: transparent;
+  letter-spacing: 2px;
+  margin-top: 1.25rem;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.clear-btn:hover{
+  color: darkred;
+}
